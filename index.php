@@ -1,47 +1,3 @@
-<?php
-session_start(); 
-
-include_once("header.php");
-
-$conn = mysqli_connect("localhost", "root", "", "Loan");
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-$message = '<h3>Please enter username and/or password</h3>'; 
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['username']) && isset($_POST['password'])) {
-
-        $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-
-        $sql = "SELECT user_id FROM tblUser WHERE username = ? AND password = ?";
-        $stmt = mysqli_prepare($conn, $sql);
-        mysqli_stmt_bind_param($stmt, "ss", $username, $password);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-
-        if (mysqli_num_rows($result) > 0) {
-            $_SESSION['loggedin'] = true;
-            $_SESSION['username'] = $username;
-            header('Location: loanAmountMagalonaAdriel.php');
-            exit(); 
-        } else {
-            
-            $message = '<h3>Username and/or password does not match...</h3>';
-        }
-    } else {
-
-        $message = '<h3>Please enter both username and password...</h3>';
-    }
-}
-    
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="reset" value="Reset">
         </div>
     </form>
-    <?php echo $message;?>
+    <h3>Please enter username and/or password</h3>
 </div>
 </body>
 </html>
