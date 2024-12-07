@@ -2,7 +2,7 @@
 session_start();
 include_once("header.php"); 
 
-$conn = mysqli_connect("localhost", "root", "", "Loan");
+$conn = mysqli_connect("localhost", "root", "", "loan");
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
