@@ -152,7 +152,7 @@ PHP-Loan-System/
 ## Screenshots
 
 ### Login Page
-![Login Page](path/to/login-screenshot.png)
+![Login Page](img/LoginPage.png)
 
 ### Loan Amount Page
 ![Loan Amount Page](path/to/loan-amount-screenshot.png)
