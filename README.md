@@ -155,13 +155,13 @@ PHP-Loan-System/
 ![Login Page](img/LoginPage.png)
 
 ### Loan Amount Page
-![Loan Amount Page](path/to/loan-amount-screenshot.png)
+![Loan Amount Page](img/LoanAmountPage.png)
 
 ### Loan Information Page
-![Loan Information Page](path/to/loan-information-screenshot.png)
+![Loan Information Page](img/LoanInformationPage.png)
 
 ### Loan Confirmation Page
-![Loan Confirmation Page](path/to/loan-confirmation-screenshot.png)
+![Loan Confirmation Page](img/LoanConfirmationPage.png)
 
 ---
 
